@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>E-Klinik Siswa - Dashboard</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <div class="container">
+        <!-- Header -->
+        <header>
+            <div class="brand">
+                <div class="logo-box">
+                  <img src="https://static.wikia.nocookie.net/rooms-low-detailed/images/8/83/Cat-40.png/revision/latest/scale-to-width/40?cb=20230905185933" text=Klinik"
+       alt="Clinic Logo">
+                </div>
+                <div class="brand-title">
+                    <h1 id="app-title">E-Klinik Siswa</h1>
+                    <p>Campus Health & Medical Leave</p>
+                </div>
+            </div>
+            <div class="role-switcher">
+                <span>Roles:</span>
+                <div class="roles">
+                    <button class="role-btn active" onclick="switchRole('Student')">Student</button>
+                    <button class="role-btn" onclick="switchRole('Medical Officer')">Medical Officer</button>
+                    <button class="role-btn" onclick="switchRole('Clinic Admin')">Clinic Admin</button>
+                </div>
+            </div>
+        </header>
+
+        <!-- Navigation Tabs -->
+        <nav id="nav-tabs">
+            <a class="nav-item active" onclick="switchTab(this, 'Overview')">Overview</a>
+            <a class="nav-item" onclick="switchTab(this, 'Appointments')">Appointments</a>
+            <a class="nav-item" onclick="switchTab(this, 'Patient History')">Patient History</a>
+            <a class="nav-item" onclick="switchTab(this, 'Medical Leave')">Medical Leave</a>
+            <a class="nav-item" onclick="switchTab(this, 'Graduation Archive')">Graduation Archive</a>
+        </nav>
+
+        <!-- Content Area -->
+        <div class="content">
+            <div class="banner">
+                <h2 id="banner-title">Privacy and safety first</h2>
+                <p id="banner-desc">Show only the minimum necessary information. This demo uses fictional sample context only; emergencies require local emergency services, not this system.</p>
+            </div>
+
+            <div class="section-title" id="main-section-title">Campus care at a glance</div>
+            <div class="section-desc" id="main-section-desc">A focused view of saved appointment and medical-leave workflow records.</div>
+
+            <div class="grid" id="cards-grid">
+                <div class="card">
+                    <h3>Upcoming appointments</h3>
+                    <div class="value">1 (Tomorrow)</div>
+                </div>
+                <div class="card">
+                    <h3>Pending requests</h3>
+                    <div class="value">0</div>
+                </div>
+                <div class="card">
+                    <h3>Active leave cases</h3>
+                    <div class="value">1</div>
+                </div>
+                <div class="card">
+                    <h3>Archived records</h3>
+                    <div class="value">4</div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
